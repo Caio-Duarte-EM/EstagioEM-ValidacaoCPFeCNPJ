@@ -19,11 +19,6 @@ public readonly struct Cnpj
             return false;
         }
 
-        if (cnpj.Contains(' '))
-        {
-            return false;
-        }
-
         if (cnpj.Length != 14)
         {
             return false;

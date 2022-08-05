@@ -5,7 +5,6 @@ public readonly struct Cpf
 
     private Cpf(string valorValido)
     {
-
         Valor = ValorCpfEhValido(valorValido) ? FormateCpf(valorValido) : "000.000.000-00";
     }
 
@@ -15,11 +14,6 @@ public readonly struct Cpf
     static bool ValorCpfEhValido(string cpf)
     {
         if (string.IsNullOrWhiteSpace(cpf))
-        {
-            return false;
-        }
-
-        if (cpf.Contains(' '))
         {
             return false;
         }
