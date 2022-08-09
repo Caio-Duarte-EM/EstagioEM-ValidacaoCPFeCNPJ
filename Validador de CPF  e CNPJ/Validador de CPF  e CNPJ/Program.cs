@@ -10,7 +10,7 @@ if (opcao == "1")
     Console.Write("Digite um CPF: ");
     valor = Console.ReadLine()?.Replace(".", "").Replace("-", "").Replace(" ", "") ?? "";
     var cpf = (Cpf)valor;
-    if(cpf == "000.000.000-00" && valor != "00000000000")
+    if(cpf == "123.456.789-09" && valor != "12345678909")
     {
         Console.Write("CPF inválido\n" +
             "Valor Padrão: ");
@@ -22,7 +22,7 @@ else if(opcao == "2")
     Console.Write("Digite um CNPJ: ");
     valor = Console.ReadLine()?.Replace(".", "").Replace("-", "").Replace("/", "").Replace(" ", "") ?? "";
     var cnpj = (Cnpj)valor;
-    if (cnpj == "00.000.000/0001-00" && valor != "00000000000100")
+    if (cnpj == "12.345.678/0001-95" && valor != "12345678000195")
     {
         Console.Write("CNPJ inválido\n" +
             "Valor Padrão: ");
