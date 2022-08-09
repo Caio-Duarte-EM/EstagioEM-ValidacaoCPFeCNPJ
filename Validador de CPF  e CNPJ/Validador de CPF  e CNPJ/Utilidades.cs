@@ -1,5 +1,5 @@
 ﻿namespace Validador_de_CPF__e_CNPJ;
-internal interface IUtilidades
+public abstract class Utilidades
 {
     public static bool ValorCpfEhValido(string cpf)
     {
