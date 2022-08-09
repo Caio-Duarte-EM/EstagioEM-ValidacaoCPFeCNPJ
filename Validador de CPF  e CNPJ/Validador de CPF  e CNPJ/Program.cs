@@ -10,14 +10,14 @@ if (opcao == "1")
     Console.Write("Digite um CPF: ");
     valor = Console.ReadLine()?.Replace(".", "").Replace("-", "").Replace(" ", "") ?? "";
     var cpf = (Cpf)valor;
-    if(cpf == "123.456.789-09" && valor != "12345678909")
+    if (cpf == "123.456.789-09" && valor != "12345678909")
     {
         Console.Write("CPF inválido\n" +
             "Valor Padrão: ");
     }
     Console.WriteLine(cpf);
 }
-else if(opcao == "2")
+else if (opcao == "2")
 {
     Console.Write("Digite um CNPJ: ");
     valor = Console.ReadLine()?.Replace(".", "").Replace("-", "").Replace("/", "").Replace(" ", "") ?? "";
