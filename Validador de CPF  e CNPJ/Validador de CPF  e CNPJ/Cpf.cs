@@ -1,9 +1,7 @@
-﻿using Validador_de_CPF__e_CNPJ;
-namespace Validador_de_CPF_e_CNPJ;
-public struct Cpf 
+﻿namespace Validador_de_CPF_e_CNPJ;
+public readonly struct Cpf 
 {
     public readonly string Valor;
-
     private Cpf(string valorValido)
     {
         Valor = Utilidades.ValorCpfEhValido(valorValido) ? Utilidades.FormateCpf(valorValido) : "123.456.789-09";

@@ -1,4 +1,4 @@
-﻿namespace Validador_de_CPF__e_CNPJ;
+﻿namespace Validador_de_CPF_e_CNPJ;
 public abstract class Utilidades
 {
     public static bool ValorCpfEhValido(string cpf)
@@ -73,12 +73,7 @@ public abstract class Utilidades
         return true;
     }
 
-    public static string FormateCpf(string cpf)
-    {
-        return Convert.ToUInt64(cpf).ToString(@"000\.000\.000\-00");
-    }
-
-    public static bool CnpjEhValido(string cnpj)
+    public static bool ValorCnpjEhValido(string cnpj)
     {
         int[] multiplicadores = { 6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
         if (string.IsNullOrWhiteSpace(cnpj))
@@ -143,6 +138,16 @@ public abstract class Utilidades
         }
 
         return true;
+    }
+
+    public static string TireFormatacao(string Codigo)
+    {
+        return Codigo.Replace(".", "").Replace("-", "").Replace("/", "");
+    }
+
+    public static string FormateCpf(string cpf)
+    {
+        return Convert.ToUInt64(cpf).ToString(@"000\.000\.000\-00");
     }
 
     public static string FormateCnpj(string cnpj)

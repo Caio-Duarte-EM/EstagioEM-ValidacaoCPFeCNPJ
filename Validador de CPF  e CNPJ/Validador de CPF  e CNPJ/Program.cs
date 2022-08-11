@@ -8,9 +8,10 @@ string valor;
 if (opcao == "1")
 {
     Console.Write("Digite um CPF: ");
-    valor = Console.ReadLine()?.Replace(".", "").Replace("-", "").Replace(" ", "") ?? "";
-    var cpf = (Cpf)valor;
-    if (cpf == "123.456.789-09" && valor != "12345678909")
+    valor = Console.ReadLine() ?? "";
+    string valorSemFormatacao = Utilidades.TireFormatacao(valor);
+    var cpf = (Cpf)valorSemFormatacao;
+    if (cpf == "123.456.789-09" && valorSemFormatacao != "12345678909")
     {
         Console.Write("CPF inválido\n" +
             "Valor Padrão: ");
@@ -20,9 +21,10 @@ if (opcao == "1")
 else if (opcao == "2")
 {
     Console.Write("Digite um CNPJ: ");
-    valor = Console.ReadLine()?.Replace(".", "").Replace("-", "").Replace("/", "").Replace(" ", "") ?? "";
-    var cnpj = (Cnpj)valor;
-    if (cnpj == "12.345.678/0001-95" && valor != "12345678000195")
+    valor = Console.ReadLine() ?? "";
+    string valorSemFormatacao = Utilidades.TireFormatacao(valor);
+    var cnpj = (Cnpj)valorSemFormatacao;
+    if (cnpj == "12.345.678/0001-95" && valorSemFormatacao != "12345678000195")
     {
         Console.Write("CNPJ inválido\n" +
             "Valor Padrão: ");
